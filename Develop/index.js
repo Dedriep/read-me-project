@@ -11,7 +11,7 @@ console.log("hello world")
 
 const questions = () => {
 
-    inquirer.prompt (
+ inquirer.prompt (
     [
         {
         type: 'input',
@@ -61,15 +61,14 @@ questions()
 
 // TODO: Create a function to write README file
 //function writeToFile(readMe, data) {}
-//fs.writeFile('./readMe.md', generateMarkdown(data), err => {
-//     if (err) throw err;
-  
-//     console.log('Portfolio complete! Check out index.html to see the output!');
-//   });
+fs.writeFile('../readMe.md', generateMarkdown(data), err => {
+  if (err) throw err;
+   console.log('Portfolio complete! Check out index.html to see the output!');
+ });
 
 
 // TODO: Create a function to initialize app
 //function init() {}
 
 // Function call to initialize app
-//init();
+//init()
