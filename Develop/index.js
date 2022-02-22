@@ -57,7 +57,7 @@ const questions =
 
 // TODO: Create a function to write README file
 //function writeToFile(readMe, data) {}
-function writeToFile ()  {fs.writeFile('./readMe.md', generateMarkdown(), err => {
+function writeToFile (answers)  {fs.writeFile('./readMe.md', generateMarkdown(answers), err => {
   if (err) throw err;
     console.log('Readme complete');
  });
@@ -72,7 +72,7 @@ function init() {
         console.log("from index")
         console.log(answers)
         generateMarkdown(answers)
-        writeToFile()
+        writeToFile(answers)
     })
 }
 
