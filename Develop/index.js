@@ -52,7 +52,8 @@ const questions = () => {
 
 
     },
-]) .then(answers => console.log(answers));
+]) .then(answers => console.log(answers))
+    .then(writeToFile)
 
 };
 
@@ -61,7 +62,7 @@ questions()
 
 // TODO: Create a function to write README file
 //function writeToFile(readMe, data) {}
-fs.writeFile('../readMe.md', generateMarkdown(data), err => {
+const writeToFile = fs.writeFile('../readMe.md', generateMarkdown(data), err => {
   if (err) throw err;
    console.log('Portfolio complete! Check out index.html to see the output!');
  });

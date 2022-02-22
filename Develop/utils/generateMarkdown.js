@@ -15,12 +15,12 @@ function generateMarkdown(data) {
 
 return `# ${data.title}
 
-  ## ${data.description};
-  ## ${data.installation};
-  ## ${data.contribution};
-  ## ${data.tests}
+  ## TITLE: ${data.description};
+  ## INSTALLATION: ${data.installation};
+  ## CONTRIBUTION: ${data.contribution};
+  ## TESTS: ${data.tests}
 
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown(data);
