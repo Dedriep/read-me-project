@@ -9,9 +9,8 @@ var inquirer = require('inquirer')
 console.log("hello world")
 // TODO: Create an array of questions for user input
 
-const questions = () => {
+const questions = 
 
- inquirer.prompt (
     [
         {
         type: 'input',
@@ -52,24 +51,30 @@ const questions = () => {
 
 
     },
-]) .then(answers => console.log(answers))
-    .then(writeToFile)
+]
 
-};
-
-questions()
 
 
 // TODO: Create a function to write README file
 //function writeToFile(readMe, data) {}
-const writeToFile = fs.writeFile('../readMe.md', generateMarkdown(data), err => {
+function writeToFile ()  {fs.writeFile('./readMe.md', generateMarkdown(), err => {
   if (err) throw err;
-   console.log('Portfolio complete! Check out index.html to see the output!');
+    console.log('Readme complete');
  });
-
+}
 
 // TODO: Create a function to initialize app
-//function init() {}
+function init() {
+    inquirer.prompt (
+        questions
+    )
+    .then((answers)=>{
+        console.log("from index")
+        console.log(answers)
+        generateMarkdown(answers)
+        writeToFile()
+    })
+}
 
 // Function call to initialize app
-//init()
+init()
