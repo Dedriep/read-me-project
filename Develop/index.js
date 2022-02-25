@@ -55,7 +55,7 @@ const questions =
         type: 'list',
         name: 'license',
         message: 'Choose your licenses',
-        choices: ["MIT", "ISC LICENSE"]
+        choices: ["MIT", "ISC"]
     },
 
     

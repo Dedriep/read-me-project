@@ -4,11 +4,15 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
-  if (!license) { 
-    return '' 
-}else {
-    return ` https://img.shields.io/badge/license-MIT-brightgreen`
+  if (license === license.ISC) { 
+    return ` ![BADGE](https://img.shields.io/badge/license-ISC-yellow)`
+}if (license === license.MIT) {
+    return `  ![BADGE](https://img.shields.io/badge/license-MIT-brightgreen)
+    `
+}else { return ''
+
 }
+
 }
 
 // TODO: Create a function that returns the license link
@@ -23,7 +27,7 @@ function renderLicenseSection(license) {
     return ''
 
   } else {
-    return `## LICENSE: This project is protected under a ${license} license.`
+    return`## LICENSE: This project is protected under a ${license} license.`
   }
 }
 
@@ -36,7 +40,13 @@ function generateMarkdown(answers) {
   console.log(answers)
   return `# <${title}>
 ${renderLicenseBadge(license)}
-  ## description: 
+
+- [Installation](##installation)
+- [Usage](##usage)
+- [Credits](##credits)
+- [License](##license)
+
+  ## DESCRIPTION: 
   ${description};
   ## INSTALLATION: 
   ${installation};
@@ -44,8 +54,10 @@ ${renderLicenseBadge(license)}
   ${contribution};
   ## TESTS: 
   ${tests}
-  ## Questions ${aboutme.email} ${aboutme.username};
   ${renderLicenseSection(license)}
+  ## QUESTIONS:
+  You can view my GITHUB profile at gitub.com/${aboutme.username}
+  You may reach me at: ${aboutme.email}
 
 
 `;

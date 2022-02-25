@@ -1,14 +1,20 @@
-# <d>
- https://img.shields.io/badge/license-MIT-brightgreen
-  ## description: 
-  d;
+# <HELLO WORLD>
+
+
+- [Installation](##installation)
+- [Usage](##usage)
+- [Credits](##credits)
+- [License](##license)
+
+  ## DESCRIPTION: 
+  LOREM;
   ## INSTALLATION: 
-  g;
+  LOREM;
   ## CONTRIBUTION: 
-  ;
+  MORE;
   ## TESTS: 
-  j
-  ## Questions d d;
-  ## LICENSE: This project is protected under a ISC LICENSE license.
+  MORE
+  ## QUESTIONS DEDRIE DEDRIE;
+  ## LICENSE: This project is protected under a ISC license.
 
 
