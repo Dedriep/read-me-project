@@ -7,7 +7,6 @@ function renderLicenseBadge(license) {
   if (!license) { 
     return '' 
 }else {
-(license === license.MIT) 
     return ` https://img.shields.io/badge/license-MIT-brightgreen`
 }
 }
@@ -36,7 +35,7 @@ function generateMarkdown(answers) {
   console.log("from generate markdown")
   console.log(answers)
   return `# <${title}>
-${renderLicenseBadge}
+${renderLicenseBadge(license)}
   ## description: 
   ${description};
   ## INSTALLATION: 

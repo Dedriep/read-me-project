@@ -78,44 +78,7 @@ const questions =
     
 ]
 
-// const aboutMe = function aboutMeQuestions () {
-//     return inquirer.prompt(
-//         [
 
-//             {
-//             type: 'input',
-//             name: 'username',
-//             message: 'Provide github username',
-        
-        
-//         },
-        
-//         {
-//             type: 'input',
-//             name: 'email',
-//             message: 'Provide email address',
-//         }
-        
-//         ]
-        
-
-//     )
-// }
-
-
-
-// license array
-
-// const licenseObject  = {
-
-//     type: 'list',
-//     name: 'license',
-//     message: 'Choose your licenses',
-//     choices: ["MIT", "ISC LICENSE"]
-// }
-
-
-    
 
 
 // TODO: Create a function to write README file
