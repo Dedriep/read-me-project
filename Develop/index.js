@@ -3,8 +3,6 @@
 const generateMarkdown = require("./utils/generateMarkdown");
 const fs = require('fs')
 var inquirer = require('inquirer')
-//var title = questions[0];
-
 
 console.log("hello world")
 // TODO: Create an array of questions for user input
@@ -46,13 +44,78 @@ const questions =
 
     {
         type: 'input',
-        name: 'Tests',
+        name: 'tests',
         message: 'Provide test information'
 
 
     },
+
+    {
+
+        type: 'list',
+        name: 'license',
+        message: 'Choose your licenses',
+        choices: ["MIT", "ISC LICENSE"]
+    },
+
+    
+
+        {
+        type: 'input',
+        name: 'username',
+        message: 'Provide github username',
+    
+    
+    },
+    
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Provide email address',
+    }
+    
+    
+    
 ]
 
+// const aboutMe = function aboutMeQuestions () {
+//     return inquirer.prompt(
+//         [
+
+//             {
+//             type: 'input',
+//             name: 'username',
+//             message: 'Provide github username',
+        
+        
+//         },
+        
+//         {
+//             type: 'input',
+//             name: 'email',
+//             message: 'Provide email address',
+//         }
+        
+//         ]
+        
+
+//     )
+// }
+
+
+
+// license array
+
+// const licenseObject  = {
+
+//     type: 'list',
+//     name: 'license',
+//     message: 'Choose your licenses',
+//     choices: ["MIT", "ISC LICENSE"]
+// }
+
+
+    
 
 
 // TODO: Create a function to write README file
@@ -65,9 +128,8 @@ function writeToFile (answers)  {fs.writeFile('./readMe.md', generateMarkdown(an
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt (
-        questions
-    )
+    inquirer.prompt(questions)
+       
     .then((answers)=>{
         console.log("from index")
         console.log(answers)
