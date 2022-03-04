@@ -55,12 +55,11 @@ const questions =
         type: 'list',
         name: 'license',
         message: 'Choose your licenses',
-        choices: ["MIT", "ISC"]
+        choices: ["MIT", "ISC", "None"]
     },
 
-    
 
-        {
+    {
         type: 'input',
         name: 'username',
         message: 'Provide github username',
