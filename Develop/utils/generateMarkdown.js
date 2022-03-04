@@ -21,7 +21,6 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) { 
 if (license==="ISC") {
   return `
-  ISC License
 
 Copyright (c) [year] [fullname]
 
@@ -42,7 +41,6 @@ PERFORMANCE OF THIS SOFTWARE.
 
 else if (license === "MIT") {
 return `
-MIT License
 
 Copyright (c) [year] [fullname]
 
@@ -100,29 +98,28 @@ function generateMarkdown(answers) {
 
 ${renderLicenseBadge(license)}
 
-* Table of Contents : 
+Table of Contents : 
 - [Installation](##installation)
 - [Usage](##usage)
 - [Credits](##credits)
 - [License](##license)
 
-  ## DESCRIPTION: 
+## DESCRIPTION: 
 
   ${description}
 
-  ## INSTALLATION: 
+## INSTALLATION: 
   ${installation}
 
-  ## CONTRIBUTION: 
+## CONTRIBUTION: 
   ${contribution}
 
-  ## TESTS: 
+## TESTS: 
   ${tests}
   
   ${renderLicenseSection(license)}
-  Link : ${renderLicenseLink(license)}
 
-  ## QUESTIONS:
+## QUESTIONS:
   Click here to view my [GITHUB](github.com/${aboutme.username}) profile 
 
   You may reach me at: ${aboutme.email}
